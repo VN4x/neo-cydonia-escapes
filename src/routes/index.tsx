@@ -6,6 +6,8 @@ import heroImage from "@/assets/neo-cydonia-hero.jpg";
 import soundDomeImage from "@/assets/sirian-sound-dome.jpg";
 import olympusImage from "@/assets/olympus-spa.jpg";
 import airCruiserImage from "@/assets/ishtar-air-cruiser.jpg";
+import { MarsMap } from "@/components/mars-map";
+import { PricingCalculator } from "@/components/pricing-calculator";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -242,6 +244,10 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <PricingCalculator />
+
+      <MarsMap />
 
       <section id="timeline" className="relative border-y border-border bg-secondary/35 px-4 py-20 sm:px-6 sm:py-28">
         <div className="timeline-grid absolute inset-0 opacity-30" />
