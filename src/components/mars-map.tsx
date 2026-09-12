@@ -47,8 +47,8 @@ const regions: Region[] = [
 ];
 
 export function MarsMap() {
-  const [activeId, setActiveId] = useState(regions[0].id);
-  const active = regions.find((region) => region.id === activeId) ?? regions[0];
+  const [activeId, setActiveId] = useState(regions[0]!.id);
+  const active = regions.find((region) => region.id === activeId) ?? regions[0]!;
 
   return (
     <section id="map" className="px-4 py-20 sm:px-6 sm:py-28">

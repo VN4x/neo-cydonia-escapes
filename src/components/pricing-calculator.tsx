@@ -36,7 +36,7 @@ const currencies = [
 ] as const;
 
 function pick<T extends { name: string }>(items: readonly T[], name: string) {
-  return items.find((item) => item.name === name) ?? items[0];
+  return items.find((item) => item.name === name) ?? items[0]!;
 }
 
 function Row({ label, value, muted }: { label: string; value: string; muted?: boolean }) {
@@ -82,12 +82,12 @@ function Field({ label, value, onValueChange, items }: { label: string; value: s
 }
 
 export function PricingCalculator() {
-  const [destination, setDestination] = useState<string>(destinations[1].name);
-  const [cycle, setCycle] = useState<string>(cycles[2].name);
-  const [gravity, setGravity] = useState<string>(gravities[0].name);
+  const [destination, setDestination] = useState<string>(destinations[1]!.name);
+  const [cycle, setCycle] = useState<string>(cycles[2]!.name);
+  const [gravity, setGravity] = useState<string>(gravities[0]!.name);
   const [nights, setNights] = useState(4);
   const [travelers, setTravelers] = useState(2);
-  const [currency, setCurrency] = useState<string>(currencies[0].code);
+  const [currency, setCurrency] = useState<string>(currencies[0]!.code);
   const [payWithCrypto, setPayWithCrypto] = useState(true);
   const [confirmed, setConfirmed] = useState(false);
 
@@ -95,7 +95,7 @@ export function PricingCalculator() {
     const dest = pick(destinations, destination);
     const cyc = pick(cycles, cycle);
     const grav = pick(gravities, gravity);
-    const cur = currencies.find((item) => item.code === currency) ?? currencies[0];
+    const cur = currencies.find((item) => item.code === currency) ?? currencies[0]!;
 
     const habitat = dest.base * cyc.factor * grav.factor * nights;
     const transit = dest.base * 0.45 * travelers * cyc.factor;
