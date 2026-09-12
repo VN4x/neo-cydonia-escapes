@@ -193,6 +193,9 @@
 .hero-vignette {
   background: linear-gradient(180deg, color-mix(in oklab, var(--background) 65%, transparent) 0%, transparent 30%, color-mix(in oklab, var(--background) 15%, transparent) 58%, var(--background) 106%), linear-gradient(90deg, color-mix(in oklab, var(--background) 74%, transparent) 0%, transparent 66%);
 }
+.destination-vignette {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--background) 72%, transparent) 0%, transparent 30%, color-mix(in oklab, var(--background) 28%, transparent) 58%, var(--background) 103%), linear-gradient(90deg, color-mix(in oklab, var(--background) 78%, transparent) 0%, transparent 72%);
+}
 .scanlines { background-image: repeating-linear-gradient(0deg, transparent 0 4px, color-mix(in oklab, var(--foreground) 4%, transparent) 4px 5px); }
 .brand-mark { color: var(--primary-foreground); background: var(--primary); box-shadow: 0 0 24px color-mix(in oklab, var(--primary) 35%, transparent); }
 .status-dot { display: inline-block; width: 0.4rem; height: 0.4rem; border-radius: 999px; background: var(--cyan); box-shadow: 0 0 10px var(--cyan); animation: signal-pulse 2.4s ease-in-out infinite; }
@@ -205,6 +208,8 @@
 @media (max-width: 640px) {
   .hero-scene { min-height: 980px; }
   .hero-vignette { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 30%, transparent), transparent 28%, color-mix(in oklab, var(--background) 78%, transparent) 60%, var(--background) 100%); }
+  .destination-hero { min-height: 840px; }
+  .destination-vignette { background: linear-gradient(180deg, color-mix(in oklab, var(--background) 38%, transparent), transparent 24%, color-mix(in oklab, var(--background) 84%, transparent) 62%, var(--background) 100%); }
 }
 
 @media (prefers-reduced-motion: reduce) {

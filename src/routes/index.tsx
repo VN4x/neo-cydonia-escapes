@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowRight, Check, ChevronDown, Gauge, Orbit, Radio, Sparkles, Users } from "lucide-react";
 
@@ -46,6 +46,7 @@ const alignments = [
     transit: "Solar-Sail Sub-Orbital Shuttle",
     from: "0.9",
     status: "12 habitats left",
+    slug: "hellas-sound-dome" as const,
   },
   {
     code: "VEN-21",
@@ -57,6 +58,7 @@ const alignments = [
     transit: "Valles Marineris Mag-Lev Sleeper",
     from: "4.1",
     status: "High demand",
+    slug: "olympus-caldera-oasis" as const,
   },
   {
     code: "GATE-∞",
@@ -68,6 +70,7 @@ const alignments = [
     transit: "Autonomous Exo-Atmospheric Yacht",
     from: "18.5",
     status: "2 staterooms left",
+    slug: "ishtar-sothis-air-cruiser" as const,
   },
 ];
 
@@ -213,6 +216,9 @@ function Index() {
                     <div><dt className="text-muted-foreground">Transit</dt><dd className="mt-1 text-card-foreground">{item.transit}</dd></div>
                   </dl>
                   <div className="mt-6 flex items-end justify-between"><span className="text-[10px] uppercase tracking-[0.16em] text-muted-foreground">From / cycle</span><span className="font-display text-2xl font-bold">{item.from} <small className="text-[10px] font-medium text-muted-foreground">CR</small></span></div>
+                  <Link to="/destinations/$slug" params={{ slug: item.slug }} className="mt-5 flex h-11 items-center justify-between border-t border-border pt-4 font-display text-[10px] font-bold uppercase tracking-[0.14em] text-foreground transition-colors hover:text-primary">
+                    Enter destination <ArrowRight className="size-4" />
+                  </Link>
                 </div>
               </article>
             ))}
