@@ -1,5 +1,5 @@
 # Roadmap
-- [ ] Generate cinematic Martian imagery
-- [ ] Build the complete scrolling homepage
-- [ ] Add responsive interactions and motion
-- [ ] Verify desktop and mobile presentation
+- [x] Generate cinematic Martian imagery
+- [x] Build the complete scrolling homepage
+- [x] Add responsive interactions and motion
+- [x] Verify desktop and mobile presentation

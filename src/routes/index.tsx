@@ -165,7 +165,7 @@ function Index() {
             <div className="mb-4 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-cyan">
               <span className="h-px w-9 bg-cyan/60" /> Elysium Planitia · Mars
             </div>
-            <h1 className="font-display text-[clamp(3.2rem,8vw,7.4rem)] font-extrabold uppercase leading-[0.86] tracking-[0] text-foreground [text-shadow:0_5px_40px_var(--shadow-deep)]">
+            <h1 className="font-display text-[clamp(2.65rem,8vw,7.4rem)] font-extrabold uppercase leading-[0.88] tracking-[0] text-foreground [text-shadow:0_5px_40px_var(--shadow-deep)]">
               Neo-Cydonia<br /><span className="text-foreground/80">Escapes</span>
             </h1>
             <p className="mt-5 max-w-xl text-sm leading-6 text-foreground/75 sm:text-base">
