@@ -41,10 +41,10 @@ export type Destination = {
   atmosphere: string;
   transit: string;
   transitTime: string;
-  windows: string[];
-  parties: string[];
+  windows: [string, ...string[]];
+  parties: [string, ...string[]];
   experiences: Array<{ number: string; title: string; text: string }>;
-  habitats: Array<{ name: string; rate: string; detail: string }>;
+  habitats: [{ name: string; rate: string; detail: string }, ...Array<{ name: string; rate: string; detail: string }>];
   itinerary: Array<{ time: string; title: string; detail: string }>;
 };
 
